@@ -1,0 +1,176 @@
+{
+  "records": [
+    {
+      "id": "recCCI9KvoGUKbidP",
+      "createdTime": "2023-05-18T05:43:47.000Z",
+      "fields": {
+        "Invoice ID": "AC-277-297",
+        "Notes": "General Servicing ($72)",
+        "Status": [
+          "Full Payment Made",
+          "1st Servicing Done",
+          "2nd Servicing Done"
+        ],
+        "Order Type": "Subscription ",
+        "Service": "AC",
+        "Invoice Number": "277-297-23",
+        "1st Appointment": "2023-05-23T05:00:00.000Z",
+        "Contract Size": 288,
+        "Client": [
+          "reccYyL7vt749Ljvc"
+        ],
+        "Address (from Client)": [
+          "BLK 652 Yishun Avenue 4 #03-509 S(760652)"
+        ],
+        "Phone Number (from Client)": [
+          "+6590032679"
+        ],
+        "Client Name (from Client)": [
+          "Zaini"
+        ],
+        "Units": 4,
+        "2nd Appointment": "2023-08-23T05:00:00.000Z",
+        "3rd Appointment": "2023-11-23T05:00:00.000Z",
+        "4th Appointment": "2024-02-23T05:00:00.000Z",
+        "Auto ID": 297,
+        "Cashback Earned": 2.88,
+        "Servicing Type": "General Servicing",
+        "Vendor": [
+          "recv8e7qx3VLdljoI"
+        ],
+        "Amount to Vendor": 40.5,
+        "Invoice File (pdf)": [
+          {
+            "id": "att50PsPZpmOOw0d9",
+            "url": "https://v5.airtableusercontent.com/v2/23/23/1700503200000/XiVWmLIHsUA_C7fm-_IWKA/b4VGH_ZePGuI6j1k4kCSslFI1aYl9gS3HaBa93h2n_BD-xhei3iJYr3na_QKl2y7Yp_S48Re496A302JVefVN7tFk60oQf943fa3GkcgZif8mVxMMlYTJ_3SsvFe-gw-tjqcb_RBDXiAPx4pscD68YWfrcR02lNiQulfZWolWHM/wVPeY9y7tWWQZYNyPMrul7g-eq-A50MDRA4lDxvQ9sA",
+            "filename": "Invoice 0000089.pdf",
+            "size": 35883,
+            "type": "application/pdf",
+            "thumbnails": {
+              "small": {
+                "url": "https://v5.airtableusercontent.com/v2/23/23/1700503200000/Onwlua-AZeNBgbKBdoQ4iQ/Iw_9IUaxhMw1EP5j_EfYxIgle-FvBUTvNK5BHuoSNIz-7KieGmG58Y-2M0v9Tl3g9Ik-o3a2pK1oaip71oARcSdzMwXIk-NdXoq6O7c9Nk9XmCiZ0uqQhHHNo4hXPsB-q8JJk42DuqCt93ZpvxGf4A/j3MouBeyKVonemFsFdNK7sjZ0Wki7h3OIrm_14OYw1Y",
+                "width": 28,
+                "height": 36
+              },
+              "large": {
+                "url": "https://v5.airtableusercontent.com/v2/23/23/1700503200000/sMSdIqvIgNDlltBSnjQaMA/oREhMhH2uc44RRBe_EnVbVhsMB6CzqPPndKhvj6HedHcfpnJ7gbylBs49gZhV4B_2Z-cj_S5rUNnX9nRmZ4JjTCmQNtbQU3d6Vgl_hhPzDBU4BZMhla49Vj99rbRSwCPWjqnicXoKAZuUSTM15QK6Q/IT_A9xF6akd23YSorLECW2wK-vFgsIoEm1IAwxKOdUY",
+                "width": 396,
+                "height": 512
+              }
+            }
+          },
+          {
+            "id": "att6ezbc6TJL9x9AM",
+            "width": 946,
+            "height": 2048,
+            "url": "https://v5.airtableusercontent.com/v2/23/23/1700503200000/vXSDNUW86Id9_RTS13TCGw/fVPGWJISH3pKdiemRYGltlmJ0HEr1eTNBUi1joyakdTs3nFCEE_yT8-RWb8ZFAH7yFnIssWhN2WD9xsSINbmUSusq6pxASFC10mHKvmCKwPNlKDxYT2mKxHeq4TKE1mqDL8myJ9F6iDQ6K_eSeuZlQ/aQPYiv2oaziuxIKicygTzhLhQ6NBEWHI608rh42SUpA",
+            "filename": "image.png",
+            "size": 483583,
+            "type": "image/png",
+            "thumbnails": {
+              "small": {
+                "url": "https://v5.airtableusercontent.com/v2/23/23/1700503200000/8sl-oZ4t2JjN8E_NF1Bjwg/94Z3tbZGPitTjm9zIucKKEQo_ybWbb31pxKJ-bnAicM0DFGFm_HPEHBiIjIwKV3zCaqns8FK-HCyABQ8hOEjRc08ViPAdVzCwSebn8SukLtJRER4ZtpIpT-an1ynLzletLjlcK1xlDVFTWqLNvhJZA/lieIpad9_LkcOIwZGrVgti3qWzmVPfS3kWOj6XZSRX4",
+                "width": 17,
+                "height": 36
+              },
+              "large": {
+                "url": "https://v5.airtableusercontent.com/v2/23/23/1700503200000/mvpo7vKPWg5eZhE3qUxEiA/fZoIBqINWdRZjQBa2tIvVGslUCANW28AmUw4xNo9h105ZGGyTQxAiOSxigLRpDd26uC2pzOm3bI0CruBXf15GkXE8Hl_2Ph0dSsixfH-kwYMQugFZ727fFxjrypGzDktvEWcOqHCGMSgCAhh7yli2A/pOwWgr3QfOHJfsOXK8E8abjLrt3dNUDBCxdw3qDTxVM",
+                "width": 512,
+                "height": 1108
+              },
+              "full": {
+                "url": "https://v5.airtableusercontent.com/v2/23/23/1700503200000/0XJaq7zP0qvjooh_qGTcvQ/KkypVamJ8ufPGCCCwv4hNi3Bec5YU_NN-D2cYQBG497pPupKqXZkv8EXhldDSJ99bf-tkOY6Fh5lOovcstgXcQ_L-XbLGKVIxUN3J-XugOMgT17yekENLS6KIR0bhrfqCD5IfLYJ5PXJ6fxzJ7Bc2g/3r-_ZSEh6zk1K1TYsiXExU0OO9EyE2DJGNlNnP1ndzk",
+                "width": 3000,
+                "height": 3000
+              }
+            }
+          },
+          {
+            "id": "attGOxYIm6bW5ge8x",
+            "width": 739,
+            "height": 1600,
+            "url": "https://v5.airtableusercontent.com/v2/23/23/1700503200000/QMXBtPGe2Ymxn9goR_BhaA/1Mnz1TYfdg0EhjQ9N_VOVRyWVVH5j3T8WSW5BGEkHfkWtB0z5p7MlRv7jVb4otYh817Yu-cNK0DTpPCthwLY0SE9r7s25odgQq2NVkUJKMKApwltFUFqhwVbBu4hkXz3TNKW9ZUWZskcFDKCM01YTg/i2sWoZp4dJcULD4as4gjHPdrnjuIf2UzPXLO8XU9PEg",
+            "filename": "image.png",
+            "size": 413484,
+            "type": "image/png",
+            "thumbnails": {
+              "small": {
+                "url": "https://v5.airtableusercontent.com/v2/23/23/1700503200000/FoxhfqWg7Uab-XQtG_DB_g/L_by0s5HI_YvMCLRiSEjG1ekfSnVkcERejGx4pyIDA9L5gn-Vz61V_rRB_ZCgfnLN1uSbX74DamF6-8UwrNrVIBHSVEw0VGfVRQJF9KfUeArc0Af5XBNfG0REDA8wR-tlQqQEwP4FEMYVB3fgY6QCg/3tHi-Tt0hrHQ79U_jHnDogDoeUZddPNw-b71APQjPWk",
+                "width": 17,
+                "height": 36
+              },
+              "large": {
+                "url": "https://v5.airtableusercontent.com/v2/23/23/1700503200000/PAMeyal-I2SjWP9eifx6Ww/34b2i9XR-10XG96SeFXJgzv5yksg5ljTLu2rN-fd0CTlnoWMOljUD6i4WU5Ma1Dpmse8bTTIUKY12u5UIW0CRvVUlKhFyLvt8wa278DC_PNoiDGZNE_akqT6Yt090wy1Dew8DO0_BApvT7n1kLeevg/FsCoJ0MO0re5Qoj7lSquGQtYLFHG79fwHysP0UTG804",
+                "width": 512,
+                "height": 1109
+              },
+              "full": {
+                "url": "https://v5.airtableusercontent.com/v2/23/23/1700503200000/MfJQ7Zw7ACTBNk9IJcSGqQ/YM1CD0VOq4PEmd-ZbtAr7aFpIfPYTxUL5gHNs2VI5brmZE_RJn__vC8Eewxm7Ad5ZH1V_G7AH5K8Uy8ssQdQBs7RbHA9ShMs4epxHsvt4SXEj0Ijnb06qKPFtOtIqtowPNrmhbyUsOxM2zS87KrlTw/bhJ7kBk8Fhg3N-00lWPzEi8AXhgC6bZqs2c2VMMAlNc",
+                "width": 3000,
+                "height": 3000
+              }
+            }
+          }
+        ],
+        "Vendor Pay": [
+          "recbCwnQIgpHLXGYl",
+          "recju4NCi9wRcBanT",
+          "recWLIuJw4nPFlHjJ"
+        ],
+        "5th Appointment": "2024-02-23T05:00:00.000Z",
+        "6th Appointment": "2024-02-23T05:00:00.000Z",
+        "Entry Time": "2023-05-18T05:43:47.000Z",
+        "Service Amount": 54
+      }
+    },
+    {
+      "id": "recjxu3ihBbd1NYuc",
+      "createdTime": "2023-04-24T02:09:52.000Z",
+      "fields": {
+        "Invoice ID": "AC-166-169",
+        "Notes": "General Servicing ($90)",
+        "Status": [
+          "Full Payment Made",
+          "1st Servicing Done",
+          "2nd Servicing Done"
+        ],
+        "Order Type": "Subscription ",
+        "Service": "AC",
+        "Invoice Number": "AC-166-169-23",
+        "1st Appointment": "2023-05-23T02:00:00.000Z",
+        "Contract Size": 360,
+        "Client": [
+          "recbFhHlAcMXQK1C7"
+        ],
+        "Address (from Client)": [
+          "220 Westwood Avenue, The Floravale, #07-07, S(648352)"
+        ],
+        "Phone Number (from Client)": [
+          "+6596799206"
+        ],
+        "Client Name (from Client)": [
+          "Nakaraj "
+        ],
+        "Units": 5,
+        "Servicing Balance": "4",
+        "2nd Appointment": "2023-08-23T02:00:00.000Z",
+        "3rd Appointment": "2023-11-23T02:00:00.000Z",
+        "4th Appointment": "2024-02-23T02:00:00.000Z",
+        "Auto ID": 169,
+        "Cashback Earned": 3.6,
+        "Servicing Type": "General Servicing",
+        "Vendor": [
+          "recv8e7qx3VLdljoI"
+        ],
+        "Vendor Pay": [
+          "recbCwnQIgpHLXGYl",
+          "recju4NCi9wRcBanT",
+          "recWLIuJw4nPFlHjJ"
+        ],
+        "5th Appointment": "2024-02-23T02:00:00.000Z",
+        "6th Appointment": "2024-02-23T02:00:00.000Z",
+        "Entry Time": "2023-04-24T02:09:52.000Z"
+      }
+    }
+  ]
+}
