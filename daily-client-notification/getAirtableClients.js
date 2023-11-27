@@ -1,8 +1,9 @@
 // const { DateTime } = require("luxon");
-const https = require("https");
+const http = require("https");
 const fs = require("fs");
 const path = require("path");
 const { request } = require("http");
+const { log } = require("console");
 
 // --------------------
 // logging
@@ -47,73 +48,14 @@ function saveJsonToFile(jsonObject) {
 // Airtable Table Helper Functions
 // -------------------------
 
-function getAirtableData() {
-  const airtableBaseId = "apphm9UXhxUdXQz5K";
-  const airtableAccessToken =
-    "patnEBZvua4RxDWnE.7e4eceea5759d978b80dbb1e9bb8d346039e2ece60b1560f02145ec727f07bcc";
+function getData() {
+  const url = createUrl();
+  console.log(`url = ${url}`);
+  const options = createOptions();
+  console.log(JSON.stringify(options, null, 2));
 
-  const airtableRequestUrl = `https://api.airtable.com/v0/${airtableBaseId}`;
-  const airtableRequestHeader = {
-    Authorization: `Bearer ${airtableAccessToken}`,
-  };
-  const airtableServicesUrl = `${airtableRequestUrl}/Services`;
-  const airtableServicesFormula = encodeURIComponent(`
-  OR(
-    AND(
-      DATETIME_DIFF({1st Appointment}, NOW(), 'hours') >= 41,
-      DATETIME_DIFF({1st Appointment}, NOW(), 'hours') < 65
-    ),
-    AND(
-      DATETIME_DIFF({2nd Appointment}, NOW(), 'hours') >= 41,
-      DATETIME_DIFF({2nd Appointment}, NOW(), 'hours') < 65
-    ),
-    AND(
-      DATETIME_DIFF({3rd Appointment}, NOW(), 'hours') >= 41,
-      DATETIME_DIFF({3rd Appointment}, NOW(), 'hours') < 65
-    ),
-    AND(
-      DATETIME_DIFF({4th Appointment}, NOW(), 'hours') >= 41,
-      DATETIME_DIFF({4th Appointment}, NOW(), 'hours') < 65
-    )
-  )
-`);
-
-  // const fullUrl = `${airtableServicesUrl}?filterByFormula=${airtableServicesFormula}&maxRecords=100`;
-  const fullUrl =
-    "https://api.airtable.com/v0/apphm9UXhxUdXQz5K/Services?filterByFormula=OR(%0A++++AND(%0A++++++DATETIME_DIFF(%7B1st+Appointment%7D%2C+NOW()%2C+'hours')+%3E%3D+41%2C%0A++++++DATETIME_DIFF(%7B1st+Appointment%7D%2C+NOW()%2C+'hours')+%3C+65%0A++++)%2C%0A++++AND(%0A++++++DATETIME_DIFF(%7B2nd+Appointment%7D%2C+NOW()%2C+'hours')+%3E%3D+41%2C%0A++++++DATETIME_DIFF(%7B2nd+Appointment%7D%2C+NOW()%2C+'hours')+%3C+65%0A++++)%2C%0A++++AND(%0A++++++DATETIME_DIFF(%7B3rd+Appointment%7D%2C+NOW()%2C+'hours')+%3E%3D+41%2C%0A++++++DATETIME_DIFF(%7B3rd+Appointment%7D%2C+NOW()%2C+'hours')+%3C+65%0A++++)%2C%0A++++AND(%0A++++++DATETIME_DIFF(%7B4th+Appointment%7D%2C+NOW()%2C+'hours')+%3E%3D+41%2C%0A++++++DATETIME_DIFF(%7B4th+Appointment%7D%2C+NOW()%2C+'hours')+%3C+65%0A++++)%0A++)";
-  // const testUrl = `${airtableServicesUrl}`;
-  // console.log(testUrl);
-  const options = {
-    headers: airtableRequestHeader,
-  };
-  console.log("about to make get request");
-
-  // Make the airtable GET request using await
-  try {
-    console.log("before http");
-    const reuqest = https.get(fullUrl, options, (response) => {
-      let data = "";
-      // Event: Data received
-      response.on("data", (chunk) => {
-        data += chunk;
-      });
-
-      // Event: All data received
-      response.on("end", () => {
-        const jsonObject = JSON.parse(data);
-        saveJsonToFile(jsonObject);
-        console.log(JSON.stringify(jsonObject, null, 2));
-        console.log("test");
-      });
-    });
-    // console.log(data);
-    // console.log(typeof data);
-    // console.log(`the actual data is ${data}`);
-    return data;
-  } catch (error) {
-    console.error(`Error: ${error.message}`);
-  }
-  return console.log("function end");
+  const data = getAirtableData();
+  // console.log(data);
 }
 
 // data validation
@@ -163,6 +105,59 @@ function createClientList({ records }) {
 // ---------------------------
 // Helper Functions
 // ---------------------------
+
+// Setups up url
+function createUrl() {
+  const airtableBaseId = "apphm9UXhxUdXQz5K";
+
+  const airtableRequestUrl = `https://api.airtable.com/v0/${airtableBaseId}`;
+  const airtableServicesUrl = `${airtableRequestUrl}/Services`;
+  const airtableServicesFormula = `OR(%0A++++AND(%0A++++++DATETIME_DIFF(%7B1st+Appointment%7D%2C+NOW()%2C+'hours')+%3E%3D+41%2C%0A++++++DATETIME_DIFF(%7B1st+Appointment%7D%2C+NOW()%2C+'hours')+%3C+65%0A++++)%2C%0A++++AND(%0A++++++DATETIME_DIFF(%7B2nd+Appointment%7D%2C+NOW()%2C+'hours')+%3E%3D+41%2C%0A++++++DATETIME_DIFF(%7B2nd+Appointment%7D%2C+NOW()%2C+'hours')+%3C+65%0A++++)%2C%0A++++AND(%0A++++++DATETIME_DIFF(%7B3rd+Appointment%7D%2C+NOW()%2C+'hours')+%3E%3D+41%2C%0A++++++DATETIME_DIFF(%7B3rd+Appointment%7D%2C+NOW()%2C+'hours')+%3C+65%0A++++)%2C%0A++++AND(%0A++++++DATETIME_DIFF(%7B4th+Appointment%7D%2C+NOW()%2C+'hours')+%3E%3D+41%2C%0A++++++DATETIME_DIFF(%7B4th+Appointment%7D%2C+NOW()%2C+'hours')+%3C+65%0A++++)%0A++)`;
+
+  const fullUrl = `${airtableServicesUrl}?filterByFormula=${airtableServicesFormula}`;
+
+  return fullUrl;
+}
+
+function createOptions() {
+  const airtableAccessToken =
+    "patnEBZvua4RxDWnE.7e4eceea5759d978b80dbb1e9bb8d346039e2ece60b1560f02145ec727f07bcc";
+
+  const airtableRequestHeader = {
+    Authorization: `Bearer ${airtableAccessToken}`,
+  };
+
+  const options = {
+    headers: airtableRequestHeader,
+  };
+
+  return options;
+}
+
+async function getAirtableData(fullUrl, options) {
+  const body = await new Promise((resolve, reject) => {
+    const req = http.request(fullUrl, options, (res) => {
+      let data = "";
+
+      res.on("data", (chunk) => {
+        data += chunk;
+      });
+
+      res.on("end", () => {
+        const jsonObject = JSON.parse(data);
+        resolve(jsonObject);
+      });
+    });
+
+    req.on("error", (error) => {
+      reject(error);
+    });
+
+    req.end();
+  });
+  console.log("http call ran");
+  return body;
+}
 
 // formats phone number
 function formatPhoneNumber(phoneNumber) {
@@ -233,10 +228,10 @@ function main() {
   // import airtable
   // importAirtableBase();
   // send airtable get request & parse json response
-  const data = getAirtableData();
+  const data = getData();
   // console.log(data);
   // check if the data exists
-  const validatedData = validateData(data);
+  // const validatedData = validateData(data);
   // create client list
   // createClientList();
   // check if list > 0
