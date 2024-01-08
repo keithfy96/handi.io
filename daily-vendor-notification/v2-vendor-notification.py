@@ -255,8 +255,14 @@ def populateVendors(vendorIds):
 
 print(f"Ran started at: {currentTime.strftime('%c')}")
 
-airtableBaseId = "appUptkoscF8nJpRo"
-airtableAccessToken = "pathWRxSKfs5lHzOr.dcdf30a731edc4f664ea097ded9247739af3e4c62731265837416f01e99ab312"
+# production base
+# airtableBaseId = "appUptkoscF8nJpRo"
+# airtableAccessToken = "pathWRxSKfs5lHzOr.dcdf30a731edc4f664ea097ded9247739af3e4c62731265837416f01e99ab312"
+
+# test base
+airtableBaseId = "appXA1SPsOzoB3AlT"
+airtableAccessToken = "patXYixyGYZo6UlWh.cef8456b75728a79578d510b728397745c2365252f3c849959d4c599dddfb49c"
+
 
 airtableRequestUrl = f"https://api.airtable.com/v0/{airtableBaseId}"
 airtableRequestHeader = {
@@ -293,8 +299,8 @@ servicesRequest = requests.get(
 
 servicesResponse = servicesRequest.json()
 
-# print("service response:")
-# print(servicesResponse)
+print("service response:")
+print(servicesResponse)
 
 if ('records' not in servicesResponse):
   print('Services request error')
